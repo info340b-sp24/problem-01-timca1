@@ -13,13 +13,13 @@ const html = fs.readFileSync(htmlPath, 'utf-8'); //load the HTML file once
 //absolute path for relative loading (if needed)
 const baseDir = 'file://'+__dirname+'/';
 
-// describe('Used test-driven development', () => {
-//   test('Used Jest to pre-test code, saved in `pretest.txt`', () => {
-//     const path = __dirname + '/pretest.txt'
-//     const pretest = fs.readFileSync(path, 'utf-8');
-//     expect(pretest).toMatch(/FAIL +(problem-a)?\/problem\.spec\.js/)
-//   })
-// })
+describe('Used test-driven development', () => {
+  test('Used Jest to pre-test code, saved in `pretest.txt`', () => {
+    const path = __dirname + '/pretest.txt'
+    const pretest = fs.readFileSync(path, 'utf-8');
+    expect(pretest).toMatch(/FAIL +(problem-a)?\/problem\.spec\.js/)
+  })
+})
 
 describe('Source code is valid', () => {
   test('HTML validates without errors', async () => {
